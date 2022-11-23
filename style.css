@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+    --color7: #2ECC71;
+    --color1: #0da5fb;
+    --color2: #2f3542;
+    --red: #E74C3C;
+    /* --color3: #7f8fa6; */
+    --color3: rgb(34 47 62 / 80%);
+    --color4: #222f3e;
+    --color5: #707070;
+    --color6: rgb(34 47 62 / 60%);
+    --roboto: "Roboto", sans-serif;
+    --poppins: "Poppins", sans-serif;
+    --fontSize12: 12px;
+    --fontSize14: 14px;
+    --fontSize18: 18px;
+    --fontSize22: 22px;
+    --fontSize24: 24px;
+    --fontSize26: 26px;
+    --fontSize28: 28px;
+    --fontSize32: 32px;
+    --fontSize40: 40px;
+
+
+    --tourS: 12px;
+    --tourL: 20px;
+    --tourXl: 24px;
+
+    --tourSLH: 22px;
+
+    --regular: 400;
+    --medium: 500;
+    --semiBold: 600;
+    --bold: 700;
+
+    --scrollAnimation: 1s;
+}
+
+body {
+    font-family: var(--roboto);
+}
+
+button {
+    display: inline-block;
+}
+
+.error_text {
+    font-size: 14px;
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+button,
+input,
+textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    user-select: none;
+}
+
+input::placeholder {
+    color: rgba(34, 47, 62, .5);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* button */
+.block_btn {
+    background-color: var(--color1);
+    border-radius: 3px;
+    color: var(--white);
+    display: block;
+    padding: 7px 20px;
+    width: 100%;
+}
+.form_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5vh;
+}
+.content_wrapper{
+    max-width: 380px;
+    width: 100%;
+}
+.card {
+    box-shadow: 0px 0px 12px rgb(0 0 0 / 10%);
+    padding: 20px;
+    border-radius: 5px;
+    background: #ffffff;
+    width: 100%;
+}
+/* card header */
+.card_header {
+    margin-bottom: 30px;
+}
+.form_title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* card body */
+.card_footer {
+    margin-top: 30px;
+}
+/* card footer */
+
+/* input */
+.input_row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.input_col {
+    position: relative;
+}
+.input_control {
+    background-color: rgba(34, 47, 62, .03);
+    border: none;
+    border-radius: 3px;
+    color: rgba(34, 47, 62, .5);
+    font-size: 12px;
+    font-weight: 400;
+    height: 32px;
+    padding: 0 12px;
+    width: 100%;
+    position: relative;
+}
+.password_hide_icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+}
+.show.password_hide_icon::after {
+    content: "";
+    width: 20px;
+    height: 1px;
+    position: absolute;
+    background-color: rgba(34, 47, 62, .5);
+    transition: all .5s ease-in-out;
+    transform: rotate(-45deg);
+}
+
+@media(min-width:768px){
+    .input_control {
+        font-size: 14px;
+        height: 36px;
+    }
+    .block_btn {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+    button{
+        cursor: pointer;
+    }
+    .password_hide_icon {
+        cursor: pointer;
+    }
+}
