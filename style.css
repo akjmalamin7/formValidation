@@ -74,6 +74,10 @@ input::placeholder {
     font-size: 12px;
     font-weight: 400;
 }
+.error{
+    color:#E74C3C;
+    font-size: 12px;
+}
 
 /* button */
 .block_btn {

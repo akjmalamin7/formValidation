@@ -20,10 +20,12 @@
                     <form id="signInForm">
                         <div class="input_row">
                             <div class="input_col">
-                                <input type="email" placeholder="Your Email" name="email" class="input_control" >
+                                <input type="email" data-error="emailErrorMessage" placeholder="Your Email" name="email" class="input_control" >
+                                <span class="error" id="emailErrorMessage"></span>
                             </div>
                             <div class="input_col">
-                                <input type="password" placeholder="Your password" name="password" class="input_control" id="signInInputPassword">
+                                <input type="password" data-error="passwordErrorMessage" placeholder="Your password" name="password" class="input_control" id="signInInputPassword">
+                                <span class="error" id="passwordErrorMessage"></span>
                                 <span class="password_hide_icon" id="signInEyeIconWrapper" data-input="signInInputPassword">
                                     <svg id="Hide" xmlns="http://www.w3.org/2000/svg" width="14" height="12.825" viewBox="0 0 14 12.825">
                                         <path id="Eye_Crossed" data-name="Eye Crossed" d="M13.568,5.911A9.252,9.252,0,0,0,11.6,3.631L13.235,2a.583.583,0,1,0-.825-.825L10.635,2.952A7.029,7.029,0,0,0,7,1.966,7.724,7.724,0,0,0,.423,5.911a2.862,2.862,0,0,0,0,3.01A9.252,9.252,0,0,0,2.389,11.2L.756,12.833a.583.583,0,1,0,.825.825l1.78-1.78A7.029,7.029,0,0,0,7,12.865a7.724,7.724,0,0,0,6.572-3.944A2.862,2.862,0,0,0,13.568,5.911ZM1.417,8.31a1.7,1.7,0,0,1,0-1.789A6.6,6.6,0,0,1,7,3.133a5.889,5.889,0,0,1,2.779.679L8.6,4.986A2.911,2.911,0,0,0,4.566,9.021L3.219,10.368a8,8,0,0,1-1.8-2.058Zm7.328-.895A1.749,1.749,0,0,1,7,9.165a1.721,1.721,0,0,1-.749-.175L8.57,6.666A1.721,1.721,0,0,1,8.745,7.416Zm-3.5,0A1.749,1.749,0,0,1,7,5.666a1.721,1.721,0,0,1,.749.175L5.421,8.165A1.721,1.721,0,0,1,5.246,7.416Zm7.328.895A6.6,6.6,0,0,1,7,11.7a5.889,5.889,0,0,1-2.779-.679L5.39,9.845A2.911,2.911,0,0,0,9.425,5.81l1.347-1.347a8,8,0,0,1,1.8,2.058A1.7,1.7,0,0,1,12.574,8.31Z" transform="translate(0.004 -1.003)" fill="#222f3e" opacity="0"></path>
