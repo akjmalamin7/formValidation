@@ -10,37 +10,11 @@
     --white: #fff;
     --color7: #2ECC71;
     --color1: #0da5fb;
+    --secondaryColor:#34495e;
     --color2: #2f3542;
     --red: #E74C3C;
-    /* --color3: #7f8fa6; */
-    --color3: rgb(34 47 62 / 80%);
-    --color4: #222f3e;
-    --color5: #707070;
-    --color6: rgb(34 47 62 / 60%);
     --roboto: "Roboto", sans-serif;
     --poppins: "Poppins", sans-serif;
-    --fontSize12: 12px;
-    --fontSize14: 14px;
-    --fontSize18: 18px;
-    --fontSize22: 22px;
-    --fontSize24: 24px;
-    --fontSize26: 26px;
-    --fontSize28: 28px;
-    --fontSize32: 32px;
-    --fontSize40: 40px;
-
-
-    --tourS: 12px;
-    --tourL: 20px;
-    --tourXl: 24px;
-
-    --tourSLH: 22px;
-
-    --regular: 400;
-    --medium: 500;
-    --semiBold: 600;
-    --bold: 700;
-
     --scrollAnimation: 1s;
 }
 
@@ -54,7 +28,7 @@ button {
 
 .error_text {
     font-size: 14px;
-    color: red;
+    color: var(--red);
     text-align: center;
     margin-top: 10px;
 
@@ -81,7 +55,7 @@ input::placeholder {
 
 /* button */
 .block_btn {
-    background-color: var(--color1);
+    background-color: var(--secondaryColor);
     border-radius: 3px;
     color: var(--white);
     display: block;
@@ -97,15 +71,26 @@ input::placeholder {
     margin-top: -5vh;
 }
 .content_wrapper{
-    max-width: 380px;
+    max-width: 400px;
     width: 100%;
 }
+#success {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #2ecc71;
+    background: #2ecc7117;
+    border-radius: 5px;
+    
+    transition: all .1s ease-in-out;
+}
 .card {
-    box-shadow: 0px 0px 12px rgb(0 0 0 / 10%);
-    padding: 20px;
+    box-shadow: 0px 0px 12px rgb(0 0 0 / 7%);
+    padding: 50px 25px;
     border-radius: 5px;
     background: #ffffff;
     width: 100%;
+    border: 1px solid #34495e2b;
 }
 /* card header */
 .card_header {

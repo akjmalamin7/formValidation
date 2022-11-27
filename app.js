@@ -1,16 +1,15 @@
 let signInForm = document.getElementById("signInForm");
 let passwordField = document.getElementById("signInInputPassword");
-passwordField.addEventListener("input", function(e){
-  console.log(e.target.type)
+passwordField.addEventListener("input", function (e) {
     if (e.target.type === 'password') {
         if (e.target.value.length >= 8) {
             document.getElementById("passwordErrorMessage").innerHTML = ""
         } else {
-            
-            if(e.target.value.length <= 0){
+
+            if (e.target.value.length <= 0) {
                 console.log(1)
                 document.getElementById("passwordErrorMessage").innerHTML = `Password required`
-            } else if(e.target.value.length < 7){
+            } else if (e.target.value.length < 7) {
                 document.getElementById("passwordErrorMessage").innerHTML = `Password must be 8 characters`
             }
         }
@@ -25,6 +24,7 @@ signInForm.addEventListener("submit", function (e) {
         if (el.type !== "submit") {
             !el.value && (emptyError[el.name] = el.getAttribute("data-error"))
             formData[el.name] = el.value;
+            el.value = ""
         }
         el.addEventListener("input", function (e) {
             if (el.type === 'email') {
@@ -37,9 +37,9 @@ signInForm.addEventListener("submit", function (e) {
                 if (el.value.length >= 8) {
                     document.getElementById(emptyError[el.type]).innerHTML = ""
                 } else {
-                    if(el.value.length <= 0){
+                    if (el.value.length <= 0) {
                         document.getElementById(emptyError[el.type]).innerHTML = `${el.type} required`
-                    } else if(el.value.length < 7){
+                    } else if (el.value.length < 7) {
                         document.getElementById(emptyError[el.type]).innerHTML = `${el.type} must be 8 characters`
                     }
                 }
@@ -57,14 +57,22 @@ signInForm.addEventListener("submit", function (e) {
     }
     if (flag) return
     apiCall(formData)
+    
+
 });
 const apiCall = (formData) => {
     console.log(formData)
-    alert("Success");
-    clearTimeout(()=>{
-        alert("Success");
-    }, 1000)
+    setTimeout(() => {
+        document.getElementById("success").textContent = "Success"
+        document.getElementById("success").style.cssText = "padding: 13px 10px;"
+    }, 10);
+    setTimeout(() => {
+        document.getElementById("success").textContent = "Success"
+        document.getElementById("success").style.cssText = "padding: 13px 10px;"
+    }, 3000)
+
 }
+
 
 let eyeIconWrapper = document.getElementsByClassName("password_hide_icon");
 function isShowPassword() {
